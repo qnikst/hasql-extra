@@ -1,0 +1,36 @@
+name:                hasql-extra
+version:             0.1.0.0
+license:             MPL-2
+author:              Alexander Vershilov
+maintainer:          alexaner.vershilov@sirius.online
+category:            Database
+build-type:          Simple
+extra-source-files:  ChangeLog.md
+cabal-version:       >=1.10
+
+
+library
+  exposed-modules: Hasql.Decoders
+                   Hasql.Encoders
+  reexported-modules:
+    Hasql.Connection,
+    Hasql.Statement,
+    Hasql.Session
+  default-extensions:
+    LambdaCase
+    OverloadedStrings
+    PackageImports
+    RecordWildCards
+    TypeApplications
+  build-depends:       base >=4.11 && <5,
+                       aeson,
+                       bytestring,
+                       first-class-families,
+                       hasql,
+                       tagged,
+                       text,
+                       time,
+                       lens
+  hs-source-dirs:      src
+  default-language:    Haskell2010
+  ghc-options: -Wall -Werror
